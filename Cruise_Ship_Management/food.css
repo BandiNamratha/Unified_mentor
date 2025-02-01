@@ -1,0 +1,275 @@
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #666;
+}
+.heading span{
+    color: red;
+}
+.speciality .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.speciality .box-container .box{
+    flex: 1 1 20rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .1px 1rem rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,3);
+    cursor: pointer;
+    border-radius: .2rem;
+
+}
+.speciality .box-container .box .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%;
+    background-size: cover;
+    background-position: center;
+    
+    left: 0;
+}
+
+.speciality .box-container .box .content{
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+}
+.speciality .box-container .box .content  img{
+    margin: 1.5rem 0;
+}
+.speciality .box-container .box .content h3{
+font-size: 2.5rem;
+color: #333;
+}
+
+.speciality .box-container .box .content p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+
+}
+.speciality .box-container .box:hover .image{
+    top: 0;
+    }
+.speciality .box-container .box:hover .content{
+       transform: translateY(100%);
+} 
+.popular .box-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.popular .box-container .box{
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 .2rem 1rem rgba(0,0,0,1);
+    border: .1rem solid rgba(0,0,0,3);
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 20rem;
+    position: relative;
+}
+.popular .box-container .box img{
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .2rem;
+}
+.popular .box-container .box .price{
+    position: absolute;
+    top: 34rem;
+    left: 6.9rem;
+    /* margin-top: 50px; */
+    background-color: red;
+    color: whitesmoke;
+    font-size: 2rem;
+    padding: 0.1rem 1rem;
+    border-radius: .5rem;
+}
+
+.popular .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding-top: 1rem ;
+}
+
+.popular .box-container .box i{
+    color: gold;
+    font-size: 1.7rem;
+    padding : 1rem .1rem;
+}
+
+
+.gallery .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.gallery .box-container .box{
+    height: 25rem;
+    flex:1 1 20rem;
+    border: 0.2rem solid white;
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,.1);
+    position: relative;
+    border-radius: .1rem;
+    overflow: hidden;
+}
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery .box-container .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.9);
+    padding: 0rem;
+    padding-top: 5rem;
+    text-align: center;
+    }
+.gallery .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+.gallery .box-container .box:hover .image{
+    top: 0;
+    }
+.gallery .box-container .box:hover .content{
+       transform: translateY(80%);
+} 
+
+.gallery .box-container .box .content p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+
+}
+
+.popular .box-container .box .order_btn{
+    height: 40px;
+    width: 130px;
+    margin-right: 12px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.popular .box-container .box .order_btn:hover{
+    background-color: red;
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.review .box-container .box{
+    text-align: center;
+    padding: 0.5rem;
+    border: 0.5rem solid #fff;
+    box-shadow: 0.2rem 0.2rem rgba(0,0,0,3);
+    border-radius: .2rem;
+    flex: 1 1 10rem;
+    background: #333;
+    margin-top: 6rem;
+}
+.review .box-container .box img{
+    height: 10rem;
+    width: 10rem;
+    border: 0.5rem solid black;
+    border-radius: 150px;
+    margin-top: -7rem;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: .5rem;
+}
+.review .box-container .box .stars i{
+    font-size: 1rem;
+    color: gold;
+    padding: .1rem 0;
+}
+.review .box-container .box p{
+    font-size: 1rem;
+    color: #eee;
+    padding: 1rem 0;
+
+}
+.order .row{
+    padding: 0rem;
+    box-shadow: 0 .1rem 0.5rem rgba(0,0,0,.1);
+    background:#fff;
+    display: flex;
+    border-radius: 3rem;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+.order .row .image{
+    flex:1 2 20rem;
+
+}
+.order .row .image img{
+    padding-top: 2px;
+    margin-left: 8px;
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+.order .row form{
+    flex: 1 1 20rem;
+
+
+}
+.order .row form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.order .row form .inputBox input, .order .row form textarea{
+    padding: 0.2rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.3);
+    border-radius: .2rem;
+    width: 49%;
+
+}
+.order .row form textarea{
+    width: 90%;
+    resize: none;
+    height: 12rem;
+}
+
+
+.order .row form .btn{
+    height: 40px;
+    width: 130px;
+    margin-right: 12px;
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.order .row form .btn:hover{
+    background-color: red;
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    
+.order .row form .inputBox input{
+    width: 100%;
+}
+}

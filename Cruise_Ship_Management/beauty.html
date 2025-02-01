@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="beauty.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Background Box */
+        .main_box {
+            position: relative;
+            background: url('images/side.jpeg') right no-repeat; /* Correct the relative path */
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Sidebar Menu */
+        .sidebar_menu {
+            position: fixed;
+            height: 100vh;
+            width: 280px;
+            left: -280px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            transition: all 0.3s linear;
+        }
+
+        .sidebar_menu .logo {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+
+        .sidebar_menu .logo a {
+            color: whitesmoke;
+            font-size: 25px;
+            font-weight: 500;
+            position: absolute;
+            left: 50px;
+            line-height: 60px;
+            text-decoration: none;
+        }
+
+        .sidebar_menu .menu {
+            position: absolute;
+            top: 80px;
+            width: 100%;
+        }
+
+        .sidebar_menu .menu li {
+            margin-top: 6px;
+            padding: 14px 20px;
+        }
+
+        .sidebar_menu .menu i {
+            color: whitesmoke;
+            font-size: 20px;
+            padding-right: 8px;
+        }
+
+        .sidebar_menu .menu a {
+            color: whitesmoke;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .sidebar_menu .menu li:hover {
+            border-left: 1px solid whitesmoke;
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+        }
+
+        .sidebar_menu .social_media {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .sidebar_menu .social_media i {
+            text-decoration: none;
+            padding: 0 5px;
+            color: whitesmoke;
+            opacity: 0.6;
+            font-size: 20px;
+        }
+
+        .sidebar_menu .social_media i:hover {
+            opacity: 1;
+            transition: all 0.2s linear;
+            transform: scale(1.01);
+        }
+
+        #check {
+            display: none;
+        }
+
+        /* Header Navbar */
+        header .navbar {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            color: whitesmoke;
+            padding-top: 20px;
+            padding-right: 400px;
+        }
+
+        header .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 23px;
+            font-weight: 25px;
+        }
+
+        header .navbar .menu a:hover {
+            color: blue;
+            border-bottom: 5px solid blue;
+        }
+
+        /* Pricing Section Styles */
+        .pricing .box a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff105f;
+            color: #fff;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hover Effects */
+        .box:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Overlay and Responsive Design */
+        @media screen and (max-width: 768px) {
+            .main_box {
+                background-size: contain;
+            }
+
+            .sidebar_menu {
+                width: 220px;
+            }
+
+            .sidebar_menu .menu li {
+                font-size: 16px;
+            }
+        }
+
+        /* Section Specific Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .icons {
+            text-align: center;
+        }
+
+        .icons img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Book a Visit Form */
+        .form-box {
+            width: 380px;
+            height: 450px;
+            position: absolute;
+            margin: 6% auto;
+            background: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .inputBox {
+            margin: 10px 0;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="home" id="home">
+    <div class="content">
+        <span style="color: azure;">Welcome...</span>
+        <h3>We Make <br> You beautiful <br> & For Sure !</h3>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h1 class="heading">about us</h1>
+    <div class="row">
+        <div class="image">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.7IHU7MTZ8Bjzyd6By0CK7gHaD4&pid=Api&P=0&h=180" alt="">
+        </div>
+        <div class="content">
+            <h3 class="title">We are here for YOU</h3>
+            <p>Duis ultricies malesuada leo vel aliquet. Cia dictum auctor.</p>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.oN34oTQDXGy6UrN9W_0fogHaE8&pid=Api&P=0&h=180" alt="">
+                    <h3>Professional tools</h3>
+                </div>
+                <div class="icons">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.gl-rkd9ph8HyrQQwZBeWDQHaEK&pid=Api&P=0&h=180" alt="">
+                    <h3>Quality Products</h3>
+                </div>
+                <div class="icons">
+                    <img src="https://www.cosmoderma.it/wp-content/uploads/2022/05/clean-beauty-significato-1024x674.jpeg" alt="">
+                    <h3>Budget-Friendly Packages</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h1 class="heading">premium services</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/facial.jpg" alt="">
+            <div class="content">
+                <h3>Facials & Skin Care Treatments</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/massage.jpg" alt="">
+            <div class="content">
+                <h3>Massages</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/hairstyle.jpg" alt="">
+            <div class="content">
+                <h3>Hair Cutting, Styling</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/wax.webp" alt="">
+            <div class="content">
+                <h3>Waxing & Hair Removal</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="styles" id="styles">
+    <h1 class="heading">choose Your Look</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.yepzBpAO3VEKwOTr677gswHaE8&pid=Api&P=0&h=180" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">Bridal Makeup</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.4yFojnDFkhcd_lUbxyHOvAHaJQ&pid=Api&P=0&h=180" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">HD Makeup</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.1okF_N81qOV5L-UNYaLLfQHaE9&pid=Api&P=0&h=180" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">Matte Makeup</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.U9wzLUSWfoLAKv8tCabYPgHaE7&pid=Api&P=0&h=180" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">Celebrity Makeup</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <h1 class="heading">Offer and Pricing</h1>
+    <div class="box-container">
+        <div class="box">
+            <h3 class="title">Basic</h3>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">10</span>
+            </div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Face Primer </li>
+                <li> <i class="fas fa-check"></i> Concealer </li>
+                <li> <i class="fas fa-check"></i> Setting Powder </li>
+                <li> <i class="fas fa-check"></i> Braiding</li>
+            </ul>
+            <a href="#"><button>Book a Visit</button></a>
+        </div>
+        <div class="box">
+            <h3 class="title">Standard</h3>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">20</span>
+            </div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Styling </li>
+                <li> <i class="fas fa-check"></i> Simple Haircut </li>
+                <li> <i class="fas fa-check"></i> Color Correction </li>
+                <li> <i class="fas fa-check"></i> Perms </li>
+            </ul>
+            <a href="#"><button>Book a Visit</button></a>
+        </div>
+        <div class="box">
+            <h3 class="title">Premium</h3>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">30</span>
+            </div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Moisturizer </li>
+                <li> <i class="fas fa-check"></i> Massages </li>
+                <li> <i class="fas fa-check"></i> Custom Hair Treatment </li>
+                <li> <i class="fas fa-check"></i> Full Makeup</li>
+            </ul>
+            <a href="#"><button>Book a Visit</button></a>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h1 class="heading">Contact Us</h1>
+    <div class="form-box">
+        <form action="" method="post">
+            <div class="inputBox">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+            </div>
+            <div class="inputBox">
+                <input type="email" class="input-field" placeholder="Email" required>
+            </div>
+            <div class="inputBox">
+                <textarea class="input-field" placeholder="Message" required></textarea>
+            </div>
+            <input type="submit" value="Send Message" class="submit-btn">
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

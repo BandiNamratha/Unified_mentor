@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  />
+   </head>
+<body>
+  
+  <div class="main_box">
+    <input type="checkbox" id="check">
+    <div class="btn_one">
+      <label for="check">
+        <i class="fas fa-bars"></i>
+      </label>
+    </div>
+      
+    <div class="overlay">
+        <header class="main">
+            <div class="navbar" style="position: fixed;">
+              <div class="menu">
+                <a href="admin.html">Sign In</a>
+                <a href="add.html">Add Item</a>
+                <a href="edit_del.html">Edit/Delete Item</a>
+                <a href="menu.html">Menu Items </a>
+                <a href="">Voyager Registration</a>
+              </div>
+            </div>
+
+            
+            <div class="form-box" style="position: absolute; margin-top: 130px; left: 180px;">
+                <div class="heading-box">
+                    <h3 id="log">Log In</h3>
+                </div>
+                <div class="social-icons">
+                 </div>
+    
+                <form id="login" class="input-grp">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                     <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+    
+                <!-- <form id="register" class="input-grp">
+                    <input type="text" class="input-field" placeholder="Enter Mail Id" required>
+                    <input type="email" class="input-field" placeholder="User Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box">
+                    <span>I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form> -->
+    
+            </div>
+    
+        
+    
+    </div>
+
+    
+    <div class="sidebar_menu">
+      <div class="logo">
+        <a href="#">Cruise Ship</a>
+          </div>
+        <div class="btn_two">
+          <label for="check">   
+            <i  style="color: whitesmoke;" class="fas fa-times"></i>
+          </label>
+        </div>
+    <div class="menu">
+        <ul>
+          <li><i class="fas fa-qrcode"></i>
+            <a href="../html/index.html">Dashboard</a>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <a href="../html/voyager.html">Voyager</a>    
+          </li>
+          <li>
+            <i class="fas fa-lock"></i>
+            <a href="../html/admin.html">Admin</a>
+          </li>
+          <li>
+            <i class="fas fa-people-roof"></i>
+            <a href="#">Manager</a>
+          </li>
+          <li>
+            <!-- <i class="fas fa-question-circle"></i> -->
+            <i class="fa-solid fa-utensils"></i>
+            <a href="#">Head-Cook</a>
+          </li>
+          <li>
+            <i class="fas fa-users-viewfinder"></i>
+            <a href="#">Supervisor</a>
+          </li>
+          <li>
+            <i class="fas fa-phone-volume"></i>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+          <i class="far fa-comments"></i>
+            <a href="#">Feedback</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social_media">
+        <ul>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var x = document.getElementById("login");
+    // var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+   
+    // function register(){
+    //     x.style.left = "-400px"
+    //     y.style.left = "50px"
+    //     z.style.left = "110px"
+    // }
+    function login(){
+        x.style.left = "50px"
+        y.style.left = "450px"
+        z.style.left = "0px"
+
+    }
+
+
+</script>
+
+</body>
+</html>
